@@ -34,9 +34,6 @@ Once you have finished creating your diagram, you can click on the 'Generate' bu
     <th style="width: 150px;"> Shortcut </th><th style="width: 500px"> Description </th>
   </tr>
  <tr>
-    <td>  F5	</td><td> Switches back and forth between two global states: in the default state, all 'spinners' (numerical controls with two small 'up' and 'down' buttons) have their own individual increments, typically greater than 1. In the second state, these increments are all set to 1, so as to allow for finer adjustments.	</td>
- </tr>
- <tr>
     <td>  Backspace, Delete		</td><td>Deletes the current selection.	</td>
  </tr>
  <tr>
@@ -63,6 +60,9 @@ Once you have finished creating your diagram, you can click on the 'Generate' bu
  <tr>
     <td> Z		</td><td> Undo (moves one step backward in the recorded editing history).	</td>
  </tr>
+ <tr>
+    <td>  F5	</td><td> Switches back and forth between two global states: in the default state, all 'spinners' (numerical controls with two small 'up' and 'down' buttons) have their own individual increments, typically greater than 1. In the second state, these increments are all set to 1, so as to allow for finer adjustments.	</td>
+ </tr>
 </table>
 
 ### Input and output ###
@@ -71,10 +71,10 @@ Once you have finished creating your diagram, you can click on the 'Generate' bu
     <th style="width: 150px;"> Shortcut </th><th style="width: 500px"> Description </th>
   </tr>
  <tr>
-    <td> Ctrl+L </td><td> Opens the input text area, or, if it is already open, tries to reconstruct a diagram from the text area's contents.</td>
+    <td>   Ctrl+G </td><td> Generates the LaTeX code for the current diagram and displays it in the output text area.</td>
  </tr>
  <tr>
-    <td>   Ctrl+G </td><td> Generates the LaTeX code for the current diagram and displays it in the output text area.</td>
+    <td> Ctrl+L </td><td> Opens the input text area, or, if it is already open, tries to reconstruct a diagram from the text area's contents.</td>
  </tr>
  </table>
 
