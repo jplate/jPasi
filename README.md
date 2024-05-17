@@ -8,7 +8,7 @@ Here's a screenshot of jPasi running in an IDE:
 ## Quick Start Guide ##
 
 ### Adding and selecting nodes ###
-To start creating a diagram, you can click on one or (with shift-click) more points on the canvas and then click either on the 'Add Node' button to create an equal number of *entity nodes* or on the 'Add Contour' button to create one or more groups of eight *contour nodes*, with each group forming a rounded rectangle. The whole app basically revolves around these two kinds of nodes and the operations that can be performed on them. If you click on a given node, it becomes the *primarily selected* node, and its editable parameters are shown in the *editor tab* on the right side of the app. You can select further nodes by shift-clicking on them; the one selected last becomes the new primarily selected node. Another method of selecting nodes involves drawing a 'lasso' around them with the mouse. A selected node can be *de*selected by clicking on it while holding the Ctrl key (but not the shift key) pressed. If a given set of nodes forms a *group* (as contour nodes do by default), then selecting any one of them while *not* holding the Ctrl key pressed also results in the selection of all the others.
+To start creating a diagram, you can click on one or (with shift-click) more points on the canvas and then click either on the 'Add Node' button to create an equal number of *entity nodes* or on the 'Add Contour' button to create one or more groups of eight *contour nodes*, with each group forming a rounded rectangle. The whole app basically revolves around these two kinds of nodes and the operations that can be performed on them. If you click on a given node, it becomes the *primarily selected item*, and its editable parameters are shown in the *editor tab* on the right side of the app. You can select further nodes by shift-clicking on them; the one selected last becomes the new primarily selected item. Another method of selecting nodes involves drawing a 'lasso' around them with the mouse. A selected node can be *de*selected by clicking on it while holding the Ctrl key (but not the shift key) pressed. If a given set of nodes forms a *group* (as contour nodes do by default), then selecting any one of them while *not* holding the Ctrl key pressed also results in the selection of all the others.
 
 ### Adding text ###
 Text can be added to the diagram by editing labels attached to entity nodes. To create a label, first select an entity node, then select 'Label' in the dropdown menu to the top right, and finally click on the 'Create' button. In the editor tab, you can then edit the text of the label and, for instance, center it on the node. There is no limit to the number of labels that can be attached to a given node. (A node can be made invisible by setting its line-width to zero in the editor tab.)
@@ -20,10 +20,11 @@ To create a connector (i.e., a line or arrow), you first have to select two or m
 Once you have finished creating your diagram, you can click on the 'Generate' button in the bottom-right corner to generate code that can be pasted into your LaTeX document. This code will appear in a text area that opens up once you click on the 'Generate' button. In order for LaTeX to process it, you will need to load Peter Kabal’s [texdraw](https://ctan.org/pkg/texdraw) package in your document's preamble (using the `\usepackage` command). This code will also allow you to recreate your diagram in jPasi at a later point. To do so, first click on the 'Load' button near the bottom-right corner. This will open the same text area as before, and now you can paste your code into it. Clicking on the 'Load' button that is right beneath that text area will recreate your diagram. (There is also a 'Replace current diagram' checkbox that you will need to tick if you do not want your diagram to be added to the one that may already be present on the canvas.)
 
 ### Other features ###
-- If and when there is no primarily selected node, the editable parameters shown in the editor tab are those of the canvas itself. These include parameters of a *grid* to which nodes tend to 'snap' as they are being dragged across the canvas.
-- In the *transform tab*, you can perform geometrical transformations (scalings, rotations, and flips) on the selected group of nodes. These operations are centered on the primarily selected node. By default, the sizes of entity nodes are not affected by scaling, but this can be changed by ticking a checkbox.
+- If and when there is no primarily selected item, the editable parameters shown in the editor tab are those of the canvas itself. These include parameters of a *grid* to which nodes tend to 'snap' as they are being dragged across the canvas.
+- In the *transform tab*, you can perform geometrical transformations (scalings, rotations, and flips) on the selected group of nodes. These operations are centered on the primarily selected item. By default, the sizes of entity nodes are not affected by scaling, but this can be changed by ticking a checkbox.
 - In the *group tab*, you can create and manage groups of nodes.
 - Two or more connectors running between the same two entity nodes can be combined into a single *compound connector*. To do so, first select the two associated entity nodes (see the above entry on 'Adding connectors'). The button that is normally labeled 'Copy Selection' will then read 'Combine Connectors'. Clicking on this button will combine the two connectors into one &ndash; useful for creating bidirectional arrows. The two connectors can be decombined by clicking on a button in the editor tab of the resulting compound connector.
+- You can edit multiple items at the same time. For example, by editing the text of a label, you'll be simultaneously editing the text of any other label that happens to be selected at that time.
 
 ## Keyboard Shortcuts ##
 
@@ -147,15 +148,15 @@ Pasi maintains a 'tranformation type' variable that can assume one of three valu
     <td>   G	</td><td> Creates a new group consisting of the selected nodes or (where applicable) their highest-level active groups.</td>
  </tr>
  <tr>
-    <td>   J	</td><td> Causes the primarily selected node to 'rejoin' its lowest-level inactive group (i.e., it again becomes an active member of that group).</td>
+    <td>   J	</td><td> Causes the primarily selected item to 'rejoin' its lowest-level inactive group (i.e., it again becomes an active member of that group).</td>
  </tr>
  <tr>
-    <td>   Shift+J	</td><td> Restores the highest-level active group of the primarily selected node (i.e., reactivates the membership of all its passive members).</td>
+    <td>   Shift+J	</td><td> Restores the highest-level active group of the primarily selected item (i.e., reactivates the membership of all its passive members).</td>
  </tr>
  <tr>
-    <td>   L	</td><td> Causes the primarily selected node to 'leave' its highest-level active group (i.e., it becomes a passive member of that group).</td>
+    <td>   L	</td><td> Causes the primarily selected item to 'leave' its highest-level active group (i.e., it becomes a passive member of that group).</td>
  </tr>
  <tr>
-    <td>   Shift+L	</td><td> Dissolves the highest-level active group of the primarily selected node (i.e., deactivates the membership of all its currently active members).</td>
+    <td>   Shift+L	</td><td> Dissolves the highest-level active group of the primarily selected item (i.e., deactivates the membership of all its currently active members).</td>
  </tr>
 </table>
